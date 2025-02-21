@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Rubik+Glitch&display=swap'); */
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+/* 
+body {
+  @apply font-sans; /* Apply Roboto globally */
+/* } */ 
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 20s linear infinite;
+}
+.group:hover .animate-scroll-left,
+.group:hover .animate-scroll-right {
+  animation-play-state: paused;
+}
